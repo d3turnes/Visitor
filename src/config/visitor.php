@@ -3,6 +3,8 @@
     return [
 
         'table' => 'visitor_registry',
+        
+        'seconds' => 60*60*24,
 
         'ignored' => [
             '192.168.10.0/24',
