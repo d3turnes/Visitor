@@ -39,9 +39,6 @@
       "aliases": {
         "Visitor": "Weboap\\Visitor\\Facades\\VisitorFacade"
       }
-    },
-    "branch-alias": {
-      "dev-master": "v.2.0.5"
     }
   },
   "minimum-stability": "stable",
