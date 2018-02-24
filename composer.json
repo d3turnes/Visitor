@@ -41,7 +41,7 @@
       }
     }
   },
-  "minimum-stability": "dev-master",
+
   "require-dev": {
   }
 }
