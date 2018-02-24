@@ -1,5 +1,5 @@
 {
-  "name": "d3turnes/visitor",
+  "name": "weboap/visitor",
   "description": "log your visitors in db, page hits, and generate visit counter for Laravel 5",
   "keywords": [
     "framework",
@@ -13,8 +13,8 @@
   "license": "MIT",
   "authors": [
     {
-      "name": "d3turnes",
-      "email": "d3turnes@gmail.com"
+      "name": "WeboAp",
+      "email": "weboap@gmail.com"
     }
   ],
   "require": {
@@ -25,7 +25,7 @@
   },
   "autoload": {
     "psr-4": {
-      "d3turnes\\Visitor\\": "src"
+      "Weboap\\Visitor\\": "src"
     }
   },
   "config": {
@@ -34,10 +34,10 @@
   "extra": {
     "laravel": {
       "providers": [
-        "d3turnes\\Visitor\\VisitorServiceProvider"
+        "Weboap\\Visitor\\VisitorServiceProvider"
       ],
       "aliases": {
-        "Visitor": "d3turnes\\Visitor\\Facades\\VisitorFacade"
+        "Visitor": "Weboap\\Visitor\\Facades\\VisitorFacade"
       }
     }
   },
