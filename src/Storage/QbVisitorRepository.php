@@ -76,9 +76,17 @@ class QbVisitorRepository implements VisitorInterface
         }
     }
 
-    public function increment($ip)
-    {
-        $this->db->table($this->getTable())->whereIp($ip)->increment('clicks');
+    public function increment($ip, $seconds) {
+        
+        $undia = time() - $seconds;
+        
+        if ( $this->db->table( $this->getTable() )
+			->whereIp( $ip )
+			->where( 'time', '<', $undia )
+			->update(array('time' => time())) ) {
+		
+		    $this->db->table( $this->getTable() )->whereIp( $ip )->increment('clicks');
+	    }
     }
 
     public function clicksSum()
