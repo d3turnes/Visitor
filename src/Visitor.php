@@ -5,6 +5,7 @@ namespace Weboap\Visitor;
 use Carbon\Carbon as c;
 use Countable;
 use Illuminate\Support\Collection;
+use Illuminate\Config\Repository as Config;
 use Weboap\Visitor\Services\Cache\CacheInterface;
 use Weboap\Visitor\Services\Geo\GeoInterface;
 use Weboap\Visitor\Storage\VisitorInterface;
@@ -34,6 +35,12 @@ class Visitor implements Countable
      * @var Weboap\Visitor\Services\Cache\CacheClass
      */
     protected $cache;
+    
+    /**
+	* The Config Instance
+	* @var Config
+	*/
+	protected $config;
 
     /**
      * The Config Instance.
@@ -62,12 +69,14 @@ class Visitor implements Countable
         VisitorInterface $storage,
         GeoInterface $geo,
         Ip $ip,
-        CacheInterface $cache
-    ) {
+        CacheInterface $cache,
+        Config $config) {
+        
         $this->storage = $storage;
         $this->geo = $geo;
         $this->ip = $ip;
         $this->cache = $cache;
+        $this->config = $config;
 
         $this->collection = new Collection();
     }
@@ -98,7 +107,7 @@ class Visitor implements Countable
 
         if ($this->has($ip)) {
             //ip already exist in db.
-            $this->storage->increment($ip);
+			$this->storage->increment( $ip, $this->config->get('visitor.seconds', 60*60*24) );            
         } else {
             $geo = $this->geo->locate($ip);
 
