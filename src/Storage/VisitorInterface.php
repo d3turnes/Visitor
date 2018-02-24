@@ -50,10 +50,11 @@ interface VisitorInterface
 
     /**
      * @param $ip
+     * @param $seconds
      *
      * @return mixed
      */
-    public function increment($ip);
+    public function increment($ip, $seconds);
 
     /**
      * @return mixed
