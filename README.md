@@ -18,15 +18,15 @@ run
 composer require d3turnes/visitor @dev
 ```
 
-Install from composer
-
-run
+-- or
 
 ``` json
-	...
+	
 	"require": {
         	"d3turnes/visitor": "@dev"
     	}
+	
+	composer update
 ```
 
 ## Step 2
