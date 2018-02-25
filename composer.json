@@ -1,6 +1,6 @@
 {
   "name": "d3turnes/visitor",
-  "description": "Contador de visitas para laravel 5, basado en el package de weboap/visitor",
+  "description": "Contador de visitas para laravel 5.x, basado en el package de weboap/visitor",
   "keywords": [
     "framework",
     "laravel",
@@ -41,7 +41,7 @@
       }
     }
   },
-  "minimum-stability": "stable",
+  "minimum-stability": "dev",
   "require-dev": {
   }
 }
