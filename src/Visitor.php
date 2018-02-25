@@ -37,10 +37,10 @@ class Visitor implements Countable
     protected $cache;
     
     /**
-	* The Config Instance
-	* @var Config
-	*/
-	protected $config;
+     * The Config Instance
+     * @var Config
+     */
+    protected $config;
 
     /**
      * The Config Instance.
@@ -106,8 +106,8 @@ class Visitor implements Countable
         }
 
         if ($this->has($ip)) {
-            //ip already exist in db.
-			$this->storage->increment( $ip, $this->config->get('visitor.seconds', 60*60*24) );            
+		//ip already exist in db.
+		$this->storage->increment( $ip, $this->config->get('visitor.seconds', 60*60*24) );            
         } else {
             $geo = $this->geo->locate($ip);
 
@@ -118,6 +118,7 @@ class Visitor implements Countable
                 'ip'         => $ip,
                 'country'    => $country,
                 'clicks'     => 1,
+		'time'	     => time(),
                 'updated_at' => c::now(),
                 'created_at' => c::now(),
             ];
