@@ -49,9 +49,8 @@ class VisitorServiceProvider extends ServiceProvider
                 $app['Weboap\Visitor\Storage\VisitorInterface'],
                 $app['Weboap\Visitor\Services\Geo\GeoInterface'],
                 $app['ip'],
-                $app['Weboap\Visitor\Services\Cache\CacheInterface']
-
-            );
+                $app['Weboap\Visitor\Services\Cache\CacheInterface'],
+                $app['config']);
         });
 
         $this->app->bind('Weboap\Visitor\Visitor', function ($app) {
