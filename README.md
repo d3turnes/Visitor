@@ -15,7 +15,7 @@ The recommended way to install Winput is through composer.
 run 
 
 ``` json
-composer require weboap/visitor
+composer require d3turnes/visitor
 ```
 
 
