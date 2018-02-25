@@ -1,6 +1,6 @@
 {
-  "name": "weboap/visitor",
-  "description": "log your visitors in db, page hits, and generate visit counter for Laravel 5",
+  "name": "d3turnes/visitor",
+  "description": "Contador de visitas para laravel 5, basado en el package de weboap/visitor",
   "keywords": [
     "framework",
     "laravel",
@@ -13,8 +13,8 @@
   "license": "MIT",
   "authors": [
     {
-      "name": "WeboAp",
-      "email": "weboap@gmail.com"
+      "name": "d3turnes",
+      "email": "d3turnes@gmail.com"
     }
   ],
   "require": {
