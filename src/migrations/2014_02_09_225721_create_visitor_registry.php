@@ -17,7 +17,7 @@
                 $table->string('ip', 32);
                 $table->string('country', 4)->nullable();
                 $table->integer('clicks')->unsigned()->default(1);
-				$table->integer('time', false, true);
+		$table->integer('time', false, true);
                 $table->timestamps();
             });
         }
