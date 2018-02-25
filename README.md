@@ -16,9 +16,10 @@ For Laravel 5 installation edit your project's composer.json file to require d3t
 ``` json
 	
 	"require": {
-        	"d3turnes/visitor": "@dev"
+        	"d3turnes/visitor": "dev-master"
     	}
 ```
+
 Update Composer from the CLI:
 
 composer update
