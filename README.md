@@ -15,9 +15,19 @@ The recommended way to install Winput is through composer.
 run 
 
 ``` json
-composer require d3turnes/visitor
+composer require d3turnes/visitor @dev
 ```
 
+Install from composer
+
+run
+
+``` json
+	...
+	"require": {
+        	"d3turnes/visitor": "@dev"
+    	}
+```
 
 ## Step 2
  
