@@ -7,27 +7,21 @@ for laravel 4 use ver v1.0.0
 
 ### Installation
 
-
-The recommended way to install Winput is through composer.
+Add d3turnes/visitor to your composer file.
 
 ## Step 1
 
-run 
-
-``` json
-composer require d3turnes/visitor @dev
-```
-
--- or
+For Laravel 5 installation edit your project's composer.json file to require d3turnes/visitor.
 
 ``` json
 	
 	"require": {
         	"d3turnes/visitor": "@dev"
     	}
-	
-	composer update
 ```
+Update Composer from the CLI:
+
+composer update
 
 ## Step 2
  
